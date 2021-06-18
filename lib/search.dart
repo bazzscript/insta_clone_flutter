@@ -3,18 +3,6 @@ import 'package:flutter/material.dart';
 class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<String> buttons = [
-      "IGTV",
-      "Music",
-      "DIY",
-      "Beauty",
-      "Art",
-      "Food",
-      "Style",
-      "Architecture",
-      "Decor",
-    ];
-
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -39,20 +27,6 @@ class SearchPage extends StatelessWidget {
               ),
             ],
           ),
-          SliverAppBar(
-            title: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: List.generate(10, (index) => Container(
-                  padding: EdgeInsets.symmetric(horizontal: 5),
-                  child: OutlinedButton(onPressed: (){},
-                  child: Text(
-                    buttons[index],
-                  ),),
-                ),),
-              ),
-            ),
-          )
         ],
       ),
     );
